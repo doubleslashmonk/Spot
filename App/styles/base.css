@@ -2,7 +2,7 @@ body {
 	background-color: #eee;
 	/* Websafe Fonts */
 	font-family: Helvetica, Open Sans, sans-serif;
-	padding: 50px 200px;
+	padding: 20px 170px;
 }
 
 .clearfix:before,
@@ -34,6 +34,7 @@ body {
 }
 
 .toolbar {
+	/* Websafe Fonts */
 	font-family: Helvetica, Open Sans, sans-serif;
 	margin-bottom: 10px;
 }
@@ -47,7 +48,7 @@ body {
 	background-color: #fff;
 	border: 1px solid #000;
 	box-sizing: border-box;
-	padding: 38px;
+	padding: 20px;
 	width: 100%;
 }
 
@@ -57,6 +58,17 @@ body {
 	position: relative;
 	text-align: center;
 
+}
+
+.table--inner {
+	background-color: #ececec;
+    box-sizing: border-box;
+	border: 2px solid #fff;
+	height: 10rem;
+	line-height: 10rem;
+	position: relative;
+	width: 16rem;
+    z-index: 1;
 }
 
 .table--inner {
