@@ -6,7 +6,7 @@ const Office = () => {
     return (
         <div className = "office">
             {
-                TABLE_LIST.map((table) => <Table {...table}/>)
+                TABLE_LIST.map((table, index) => <Table key={index} {...table}/> )
             }
         </div>
     )
