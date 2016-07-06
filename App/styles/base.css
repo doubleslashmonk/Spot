@@ -52,12 +52,33 @@ body {
 }
 
 .table {
-	border: 1px solid #000;
 	display: inline-block;
+	margin: 42px;
+	position: relative;
+	text-align: center;
+
+}
+
+.table--inner {
+	background-color: #ececec;
+    box-sizing: border-box;
+	border: 2px solid #fff;
 	height: 10rem;
 	line-height: 10rem;
-	margin: 25px;
-	text-align: center;
+	position: relative;
 	width: 16rem;
+    z-index: 1;
+}
 
+.member {
+	background-color: #333;
+	border-radius: 50%;
+	display: inline-block;
+	height: 50px;
+	position: absolute;
+	width: 50px;
+}
+
+.member.vacant {
+	background-color: #ddd;
 }
