@@ -1,0 +1,37 @@
+body {
+	background-color: #eee;
+	/* Websafe Fonts */
+	font-family: Helvetica, Open Sans, sans-serif;
+	padding: 50px 200px;
+}
+
+.clearfix:before,
+
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.header {
+	margin-bottom: 20px;
+}
+
+.header--logo {
+	background-color: #999;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 25px;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	width: 90px;
+}
+
+.toolbar--name {
+	float: left;
+	font-size: 25px;
+}
