@@ -1,5 +1,6 @@
 import React from 'react';
 import Toolbar from './components/Toolbar';
+import Office from './components/Office';
 
 class App extends React.Component {
     render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
 					</div>
 				</div>
 				<Toolbar />
+				<Office />
 			</div>);
     }
 }

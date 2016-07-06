@@ -35,3 +35,13 @@ body {
 	float: left;
 	font-size: 25px;
 }
+
+.office {
+	background-color: #fff;
+	border: 1px solid #000;
+	width: 100%;
+}
+
+.toolbar {
+	margin-bottom: 10px;
+}
