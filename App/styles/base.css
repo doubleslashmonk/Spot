@@ -18,6 +18,8 @@ body {
 
 .header {
 	margin-bottom: 20px;
+	/* Websafe Fonts */
+	font-family: Helvetica, Open Sans, sans-serif;
 }
 
 .header--logo {
@@ -31,6 +33,11 @@ body {
 	width: 90px;
 }
 
+.toolbar {
+	font-family: Helvetica, Open Sans, sans-serif;
+	margin-bottom: 10px;
+}
+
 .toolbar--name {
 	float: left;
 	font-size: 25px;
@@ -39,9 +46,18 @@ body {
 .office {
 	background-color: #fff;
 	border: 1px solid #000;
+	box-sizing: border-box;
+	padding: 38px;
 	width: 100%;
 }
 
-.toolbar {
-	margin-bottom: 10px;
+.table {
+	border: 1px solid #000;
+	display: inline-block;
+	height: 10rem;
+	line-height: 10rem;
+	margin: 25px;
+	text-align: center;
+	width: 16rem;
+
 }
