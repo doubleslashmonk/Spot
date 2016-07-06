@@ -48,6 +48,8 @@ body {
 	background-color: #fff;
 	border: 1px solid #000;
 	box-sizing: border-box;
+	/* Websafe Fonts */
+	font-family: Open Sans, Helvetica, sans-serif;
 	padding: 20px;
 	width: 100%;
 }
