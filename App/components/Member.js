@@ -6,6 +6,15 @@ import MemberDialog from './MemberDialog';
 
 const 
 
+mapStateToProps = (state = {}, {id}) => {
+	const {results = []} = state;
+	return {
+		highlighted: results.find( 
+			(member) => member.id === id
+		)
+	}
+},
+
 POSITION_LIST = [
 	{
 		top: "-25px",
@@ -27,8 +36,8 @@ POSITION_LIST = [
 
 Member = (props) => {
 	const 
-		{name, id, seat, vacant, dispatch} = props,
-		className = `member ${vacant?'vacant':''}`;
+		{name, id, seat, highlighted, vacant, dispatch} = props,
+		className = `member ${vacant? 'vacant': ''} ${highlighted? 'highlighted': ''}`;
 	return (
 		<OverlayTrigger 
 				trigger='click'
@@ -40,7 +49,8 @@ Member = (props) => {
 					<div className = {className} style = {POSITION_LIST[seat-1]}  />
         </OverlayTrigger>
 	);
-};
+},
 
+MemberContainer = connect(mapStateToProps,null)(Member);
 
-export default Member;
+export default MemberContainer;

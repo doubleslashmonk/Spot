@@ -1,30 +1,35 @@
+import TABLE_LIST from '../data/TABLE_LIST';
 import {combineReducers} from 'redux';
 import ActionTypes from '../actions/actionTypes';
 
 const 
-	MemberReducer = (state = {}, action) => {
-		console.log('action received', action.type);
+	Search = (state = {}, action) => {
 		switch(action.type) {
-			case ActionTypes.SHOW_MEMBER_INFO: 
-				const {props} = action;
-				return Object.assign( 
-					{},
-					props,
-					{
-        				showDialog: true
-      				});
-				break;
-			case ActionTypes.HIDE_MEMBER_INFO: 
+			case ActionTypes.SEARCH: 
+				const {input} = action,
+					membersList = TABLE_LIST.reduce( 
+						(allMembers,{members}) => {
+							return [
+								...allMembers,
+								...members
+							];
+						}, []);
 				return {
-        			showDialog: false
-      			}
+					results: membersList.filter( 
+						({name}) => 
+						name.split(' ')
+						.map((part) => part.toLowerCase())
+						.indexOf(input.toLowerCase()) > -1 ||
+						name.toLowerCase() === input.toLowerCase()
+					)
+				}
 				break;
 			default: {
 				return {
-        			showDialog: false
+        			
       			}
 			}
 		}
 	}
 
-export default MemberReducer
+export default Search
