@@ -7,25 +7,28 @@ const
 					designation: 'SR. Developer',
 					id: 1,
 					name: 'Shilpy',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/1.png',
 					project: 'Dell App Design',
 					seat: 1,
 					team: 'Mobile Frontend'
 				},
 				{
-					designation: 'SR. Designer',
+					designation: 'JR. Manager',
 					id: 2,
-					name: 'Jason',
-					project: 'Apple Design',
+					name: 'Ashton',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/3.png',
+					project: 'Apple',
 					seat: 3,
-					team: 'Apple'
+					team: 'Management'
 				},
 				{
-					designation: 'JR. Manager',
+					designation: 'SR. Manager',
 					id: 3,
-					name: 'Alex',
-					project: 'Oracle CMS',
+					name: '',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/2.png',
+					project: 'Microsoft',
 					seat: 4,
-					team: 'Oracle'
+					team: 'Management'
 				}
 			]
 		},
@@ -36,6 +39,7 @@ const
 					designation: 'HR Relations',
 					id: 4,
 					name: 'Akriti',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/4.png',
 					project: '',
 					seat: 2,
 					team: 'HR'
@@ -44,6 +48,7 @@ const
 					designation: 'HR Lead',
 					id: 5,
 					name: 'Roy',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/5.png',
 					project: '',
 					seat: 4,
 					team: 'HR'
@@ -56,7 +61,8 @@ const
 				{
 					designation: 'Admin',
 					id: 6,
-					name: 'Mr. Mojo',
+					name: 'Rakesh Burman',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/6.png',
 					project: '',
 					seat: 1,
 					team: 'Admin'
@@ -64,7 +70,8 @@ const
 				{
 					designation: 'Admin Junior',
 					id: 7,
-					name: 'Guddu',
+					name: 'Akansha',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/7.png',
 					project: '',
 					seat: 2,
 					team: 'Admin'
@@ -72,7 +79,8 @@ const
 				{
 					designation: 'Cashier',
 					id: 8,
-					name: 'Tinu',
+					name: 'Pretie',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/8.png',
 					project: '',
 					seat: 4,
 					team: 'Admin'
@@ -83,36 +91,40 @@ const
 			name: 'Table 4',
 			members: [
 				{
-					designation: 'Sr. Frontend Dev',
+					designation: 'SR. Frontend Dev',
 					id: 9,
 					name: 'Ashka',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/9.png',
+					project: 'Apple',
 					seat: 1,
-					team: 'App Frontend'
+					team: 'Front End'
 				},
 				{
-					designation: 'Jr. Frontend Dev',
+					designation: 'JR. Frontend Dev',
 					id: 10,
 					name: 'Krish Kapoor',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/10.png',
+					project: 'Morgan Stanley',
 					seat: 2,
-					team: 'App Frontend'
+					team: 'Front End'
 				},
 				{
-					designation: 'Sr. Backend Dev',
+					designation: 'SR. Backend Dev',
 					id: 11,
-					name: 'Mudassir Malik',
-					project: 'Web Applications Development',
+					name: 'Anaya Brahmbhatt',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/2.png',
+					project: 'Morgan Stanley',
 					seat: 3,
-					team: 'App Backend'
+					team: 'Backend'
 				},
 				{
-					designation: 'Jr. Backend Dev',
+					designation: 'JR. Backend Dev',
 					id: 12,
 					name: 'Deepika',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/3.png',
+					project: 'Warner Brothers',
 					seat: 4,
-					team: 'App Backend'
+					team: 'Backend'
 				}
 			]
 		},
@@ -120,28 +132,31 @@ const
 			name: 'Table 5',
 			members: [
 				{
-					designation: 'Sr. Frontend Dev',
+					designation: 'SR. Frontend Dev',
 					id: 13,
 					name: 'Ashka',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/4.png',
+					project: 'Warner Brothers',
 					seat: 1,
-					team: 'App Frontend'
+					team: 'Front End'
 				},
 				{
-					designation: 'Jr. Frontend Dev',
+					designation: 'JR. Frontend Dev',
 					id: 14,
 					name: 'Krish Kapoor',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/5.png',
+					project: 'Royal Bank of Canada',
 					seat: 2,
-					team: 'App Frontend'
+					team: 'Front End'
 				},
 				{
-					designation: 'Sr. Backend Dev',
+					designation: 'JR. Frontend Dev',
 					id: 15,
 					name: 'Mudassir Malik',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/1.png',
+					project: 'Royal Bank of Canada',
 					seat: 3,
-					team: 'App Backend'
+					team: 'Backend'
 				}
 			]
 		},
@@ -149,20 +164,22 @@ const
 			name: 'Table 6',
 			members: [
 				{
-					designation: 'Sr. Backend Dev',
+					designation: 'SR. Backend Dev',
 					id: 16,
-					name: 'Mudassir Malik',
-					project: 'Web Applications Development',
+					name: 'Kailsh Raman',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/7.png',
+					project: 'Deloitte',
 					seat: 3,
-					team: 'App Backend'
+					team: 'Backend'
 				},
 				{
-					designation: 'Jr. Backend Dev',
+					designation: 'JR. Backend Dev',
 					id: 17,
 					name: 'Deepika',
-					project: 'Web Applications Development',
+					img: 'http://malik4sprinklr.com/repos/spot/assets/images/9.png',
+					project: 'Deloitte',
 					seat: 4,
-					team: 'App Backend'
+					team: 'Backend'
 				}
 			]
 		}

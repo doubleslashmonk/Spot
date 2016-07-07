@@ -1,12 +1,10 @@
 body {
 	background-color: #eee;
-	/* Websafe Fonts */
-	font-family: Helvetica, Open Sans, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	padding: 20px 170px;
 }
 
 .clearfix:before,
-
 .clearfix:after {
   content: "";
   display: table;
@@ -16,17 +14,103 @@ body {
   clear: both;
 }
 
+.dialog {
+	background-color: #fff;
+	color: #000;
+	padding: 12px;
+    width: 180px;
+}
+
+.dialog--body--data {
+	margin-bottom: 10px;
+}
+
+.dialog--body--field {
+	font-size: 11px;
+    color: #aaa;
+}
+
+.dialog--body--value {
+	font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialog--header {
+	margin-bottom: 10px;
+}
+
+.dialog--header--data {
+	float: left;
+	margin-top: 5px;
+		width: 94px;
+}
+
+.dialog--header--dp {
+	border-radius: 50%;
+	float: left;
+    height: 50px;
+    margin-right: 12px;
+    overflow: hidden;
+    width: 50px;
+}
+
+.dialog--header--dp img {
+    height: 100%;
+   	width: 100%;
+}
+
+.dialog--header--name {
+	font-size: 15px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialog--header--desig {
+	font-size: 12px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialog-vacant {
+	color: #aaa;
+	font-style: italic;
+	padding: 12px;
+}
+
+.filter {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 35px;
+	margin-left: 10px;
+	padding: 6px;
+	text-align: center;
+	width: 40px;
+}
+
+.filter--icon {
+	font-size: 20px;
+}
+
+.filterContainer {
+	float: right;
+}
+
 .header {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	margin-bottom: 20px;
-	/* Websafe Fonts */
-	font-family: Helvetica, Open Sans, sans-serif;
 }
 
 .header--logo {
 	background-color: #999;
 	border-radius: 50%;
 	color: #fff;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: 500;
 	height: 90px;
 	line-height: 90px;
@@ -34,56 +118,15 @@ body {
 	width: 90px;
 }
 
-.toolbar {
-	margin-bottom: 10px;
+input {
+	font-family: inherit;
 }
 
-.toolbar--name {
-	float: left;
-	/* Websafe Fonts */
-	font-family: Helvetica, Open Sans, sans-serif;
-	font-size: 25px;
+input:focus { 
+    outline:none;
+    border:1px solid #0EBFE9;
 }
 
-.office {
-	background-color: #fff;
-	border: 1px solid #000;
-	box-sizing: border-box;
-	/* Websafe Fonts */
-	font-family: Open Sans, Helvetica, sans-serif;
-	padding: 20px;
-	width: 100%;
-}
-
-.table {
-	display: inline-block;
-	margin: 42px;
-	position: relative;
-	text-align: center;
-
-}
-
-.table--inner {
-	background-color: #ececec;
-    box-sizing: border-box;
-	border: 2px solid #fff;
-	height: 10rem;
-	line-height: 10rem;
-	position: relative;
-	width: 16rem;
-    z-index: 1;
-}
-
-.table--inner {
-	background-color: #ececec;
-    box-sizing: border-box;
-	border: 2px solid #fff;
-	height: 10rem;
-	line-height: 10rem;
-	position: relative;
-	width: 16rem;
-    z-index: 1;
-}
 
 .member {
 	background-color: #333;
@@ -102,16 +145,13 @@ body {
 	background-color: #ddd;
 }
 
-
-input {
-	font-family: inherit;
+.office {
+	background-color: #fff;
+	border: 1px solid #000;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
 }
-
-input:focus { 
-    outline:none;
-    border:1px solid #0EBFE9;
-}
-
 
 .search {
     height: 35px;
@@ -140,74 +180,46 @@ input:focus {
 	float: right;
 }
 
-
-.dialog {
-	background-color: #fff;
-	height: 135px;
-	padding: 12px;
-    width: 190px;
-}
-
-.dialog--body--data {
-	margin-bottom: 10px;
-}
-
-.dialog--body--field {
-	font-size: 11px;
-    color: #aaa;
-}
-
-.dialog--body--value {
-	font-size: 13px;
-}
-
-.dialog--header {
-	margin-bottom: 10px;
-}
-
-.dialog--header--data {
+.oTable {
 	display: inline-block;
-}
-
-.dialog--header--dp {
-	border-radius: 50%;
-	display: inline-block;
-    height: 45px;
-    margin-right: 12px;
-    overflow: hidden;
-    width: 45px;
-}
-
-.dialog--header--dp img {
-    height: 100%;
-   	width: 100%;
-}
-
-.dialog--header--name {
-	font-size: 15px;
-}
-
-.dialog--header--desig {
-	font-size: 12px;
-}
-
-
-.filter {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	cursor: pointer;
-	height: 35px;
-	margin-left: 10px;
-	padding: 6px;
+	margin: 42px;
+	position: relative;
 	text-align: center;
-	width: 40px;
+
 }
 
-.filter--icon {
-	font-size: 20px;
+.oTable--inner {
+	background-color: #ececec;
+    box-sizing: border-box;
+	border: 2px solid #fff;
+	color: #777;
+	font-size: 16px;
+	height: 160px;
+	line-height: 160px;
+	position: relative;
+	width: 254px;
+    z-index: 1;
 }
 
-.filterContainer {
-	float: right;
+.toolbar {
+	margin-bottom: 10px;
+}
+
+.toolbar--name {
+	float: left;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 25px;
+}
+
+
+
+.popover {
+	border-radius: 2px;
+	box-shadow: 3px 3px 4px rgba(0,0,0, .3);
+	padding: 0;
+}
+
+.popover-content {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	padding: 0;
 }

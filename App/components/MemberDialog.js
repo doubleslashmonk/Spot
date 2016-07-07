@@ -4,21 +4,22 @@ const
 	Dialog = ({
 		name = '',
 		designation = '',
+		img ='',
 		project = '',
 		team = ''
 	}) => {
 		return (
 			<div className = "dialog">
-				<div className = "dialog--header">
+				<div className = "dialog--header clearfix">
 					<div className = "dialog--header--dp">
-						<img src = "http://pets.petsmart.com/services/_images/grooming/dog/m_t/dog-aromatherapy.jpg" />
+						<img src = {img} />
 					</div>
 					<div className = "dialog--header--data">
 						<div className = "dialog--header--name">
 							{name}
 						</div>
 						<div className = "dialog--header--desig">
-							{designation}
+							{designation || '--'}
 						</div>
 					</div>
 				</div>
@@ -28,7 +29,7 @@ const
 							Team
 						</div>
 						<div className = "dialog--body--value">
-							{team}
+							{team || '--'}
 						</div>
 					</div>
 					<div className = "dialog--body--data">
@@ -36,7 +37,7 @@ const
 							Current Project
 						</div>
 						<div className = "dialog--body--value">
-							{project}
+							{project || '--'}
 						</div>
 					</div>
 				</div>

@@ -37,15 +37,20 @@ POSITION_LIST = [
 Member = (props) => {
 	const 
 		{name, id, seat, highlighted, vacant, dispatch} = props,
-		className = `member ${vacant? 'vacant': ''} ${highlighted? 'highlighted': ''}`;
+		className = `member ${vacant? 'vacant': ''} ${highlighted? 'highlighted': ''}`,
+		dialogContent = vacant?
+			<div className = "dialog-vacant">This seat is vacant</div>:
+			<MemberDialog {...props} />;
 	return (
 		<OverlayTrigger 
-				trigger='click'
-				placement='right'
-				overlay={<Popover><MemberDialog {...props} /></Popover>}
-				delayShow={100}
-				delayHide={50}
-				container = {this}>
+				trigger = 'hover'
+				placement = 'right'
+				overlay = {<Popover>{dialogContent}</Popover>}
+				delayShow = {100}
+				delayHide = {50}
+				container = {this}
+				show = {highlighted}
+				>
 					<div className = {className} style = {POSITION_LIST[seat-1]}  />
         </OverlayTrigger>
 	);

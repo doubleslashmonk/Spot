@@ -25,9 +25,9 @@ const
 		members = []
 		}) => {
 		return (
-			<div className = "table">
+			<div className = "oTable">
 				{getMembersList(members).map((member) => <Member key={member.id} {...member}/>)}
-				<div className = "table--inner">
+				<div className = "oTable--inner">
 					{name}
 				</div>			
 			</div>
