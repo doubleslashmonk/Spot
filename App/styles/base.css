@@ -27,6 +27,7 @@ body {
 	border-radius: 50%;
 	color: #fff;
 	font-size: 25px;
+	font-weight: 500;
 	height: 90px;
 	line-height: 90px;
 	text-align: center;
@@ -34,13 +35,13 @@ body {
 }
 
 .toolbar {
-	/* Websafe Fonts */
-	font-family: Helvetica, Open Sans, sans-serif;
 	margin-bottom: 10px;
 }
 
 .toolbar--name {
 	float: left;
+	/* Websafe Fonts */
+	font-family: Helvetica, Open Sans, sans-serif;
 	font-size: 25px;
 }
 
@@ -93,6 +94,120 @@ body {
 	width: 50px;
 }
 
+.member.highlighted {
+	background-color: #0BB5FF;
+}
+
 .member.vacant {
 	background-color: #ddd;
+}
+
+
+input {
+	font-family: inherit;
+}
+
+input:focus { 
+    outline:none;
+    border:1px solid #0EBFE9;
+}
+
+
+.search {
+    height: 35px;
+    position: relative;
+    width: 270px;
+}
+
+.search--icon {
+	color: #777;
+	position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.search--input {
+	border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: #777;
+    font-size: 16px;
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+}
+
+.searchContainer {
+	float: right;
+}
+
+
+.dialog {
+	background-color: #fff;
+	height: 135px;
+	padding: 12px;
+    width: 190px;
+}
+
+.dialog--body--data {
+	margin-bottom: 10px;
+}
+
+.dialog--body--field {
+	font-size: 11px;
+    color: #aaa;
+}
+
+.dialog--body--value {
+	font-size: 13px;
+}
+
+.dialog--header {
+	margin-bottom: 10px;
+}
+
+.dialog--header--data {
+	display: inline-block;
+}
+
+.dialog--header--dp {
+	border-radius: 50%;
+	display: inline-block;
+    height: 45px;
+    margin-right: 12px;
+    overflow: hidden;
+    width: 45px;
+}
+
+.dialog--header--dp img {
+    height: 100%;
+   	width: 100%;
+}
+
+.dialog--header--name {
+	font-size: 15px;
+}
+
+.dialog--header--desig {
+	font-size: 12px;
+}
+
+
+.filter {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 35px;
+	margin-left: 10px;
+	padding: 6px;
+	text-align: center;
+	width: 40px;
+}
+
+.filter--icon {
+	font-size: 20px;
+}
+
+.filterContainer {
+	float: right;
 }

@@ -26,7 +26,7 @@ const
 		}) => {
 		return (
 			<div className = "table">
-				{getMembersList(members).map((member, index) => <Member key={index} {...member}/>)}
+				{getMembersList(members).map((member) => <Member key={member.id} {...member}/>)}
 				<div className = "table--inner">
 					{name}
 				</div>			

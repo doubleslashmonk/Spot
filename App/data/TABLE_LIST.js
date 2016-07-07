@@ -5,6 +5,7 @@ const
 			members: [
 				{
 					designation: 'SR. Developer',
+					id: 1,
 					name: 'Shilpy',
 					project: 'Dell App Design',
 					seat: 1,
@@ -12,6 +13,7 @@ const
 				},
 				{
 					designation: 'SR. Designer',
+					id: 2,
 					name: 'Jason',
 					project: 'Apple Design',
 					seat: 3,
@@ -19,6 +21,7 @@ const
 				},
 				{
 					designation: 'JR. Manager',
+					id: 3,
 					name: 'Alex',
 					project: 'Oracle CMS',
 					seat: 4,
@@ -31,6 +34,7 @@ const
 			members: [
 				{
 					designation: 'HR Relations',
+					id: 4,
 					name: 'Akriti',
 					project: '',
 					seat: 2,
@@ -38,6 +42,7 @@ const
 				},
 				{
 					designation: 'HR Lead',
+					id: 5,
 					name: 'Roy',
 					project: '',
 					seat: 4,
@@ -50,6 +55,7 @@ const
 			members: [
 				{
 					designation: 'Admin',
+					id: 6,
 					name: 'Mr. Mojo',
 					project: '',
 					seat: 1,
@@ -57,6 +63,7 @@ const
 				},
 				{
 					designation: 'Admin Junior',
+					id: 7,
 					name: 'Guddu',
 					project: '',
 					seat: 2,
@@ -64,6 +71,7 @@ const
 				},
 				{
 					designation: 'Cashier',
+					id: 8,
 					name: 'Tinu',
 					project: '',
 					seat: 4,
@@ -76,6 +84,7 @@ const
 			members: [
 				{
 					designation: 'Sr. Frontend Dev',
+					id: 9,
 					name: 'Ashka',
 					project: 'Web Applications Development',
 					seat: 1,
@@ -83,6 +92,7 @@ const
 				},
 				{
 					designation: 'Jr. Frontend Dev',
+					id: 10,
 					name: 'Krish Kapoor',
 					project: 'Web Applications Development',
 					seat: 2,
@@ -90,6 +100,7 @@ const
 				},
 				{
 					designation: 'Sr. Backend Dev',
+					id: 11,
 					name: 'Mudassir Malik',
 					project: 'Web Applications Development',
 					seat: 3,
@@ -97,6 +108,7 @@ const
 				},
 				{
 					designation: 'Jr. Backend Dev',
+					id: 12,
 					name: 'Deepika',
 					project: 'Web Applications Development',
 					seat: 4,
@@ -109,6 +121,7 @@ const
 			members: [
 				{
 					designation: 'Sr. Frontend Dev',
+					id: 13,
 					name: 'Ashka',
 					project: 'Web Applications Development',
 					seat: 1,
@@ -116,6 +129,7 @@ const
 				},
 				{
 					designation: 'Jr. Frontend Dev',
+					id: 14,
 					name: 'Krish Kapoor',
 					project: 'Web Applications Development',
 					seat: 2,
@@ -123,6 +137,7 @@ const
 				},
 				{
 					designation: 'Sr. Backend Dev',
+					id: 15,
 					name: 'Mudassir Malik',
 					project: 'Web Applications Development',
 					seat: 3,
@@ -131,10 +146,11 @@ const
 			]
 		},
 		{
-			name: 'Table 7',
+			name: 'Table 6',
 			members: [
 				{
 					designation: 'Sr. Backend Dev',
+					id: 16,
 					name: 'Mudassir Malik',
 					project: 'Web Applications Development',
 					seat: 3,
@@ -142,6 +158,7 @@ const
 				},
 				{
 					designation: 'Jr. Backend Dev',
+					id: 17,
 					name: 'Deepika',
 					project: 'Web Applications Development',
 					seat: 4,
