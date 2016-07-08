@@ -12,7 +12,8 @@ const
 			if(occupiedSeats.indexOf(i) < 0) {
 				newMembersList.push( {
 					seat: i,
-					vacant: true
+					vacant: true,
+					key: i+100
 				} );
 			}
 		}
