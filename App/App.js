@@ -1,3 +1,8 @@
+/*
+ * Basic component. Renders header, Toolbar and Office component.
+ */
+
+
 import React from 'react';
 import Toolbar from './components/Toolbar';
 import Office from './components/Office';

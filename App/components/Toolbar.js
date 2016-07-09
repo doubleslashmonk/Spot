@@ -1,3 +1,8 @@
+/*
+ * The Filter Component renders the Filter and SearchBar.
+ */
+
+
 import React from 'react';
 import SearchBar from './SearchBar';
 import Filter from './Filter';

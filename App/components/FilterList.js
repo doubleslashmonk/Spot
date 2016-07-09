@@ -3,38 +3,35 @@
  */
 
 import React from 'react';
-import FilterItem from './FilterItem';
+import {connect} from 'react-redux';
+import FilterItemKeys from './FilterItemKeys';
+import FilterItemValues from './FilterItemValues';
 import FILTER_LIST from '../data/FILTER_LIST';
 
-const FilterList = () => {
-    return (
-        <div className="filter-list">
-            <div className="filter-list--keys">
-                {
-                    FILTER_LIST.map(({key}) => {
-                        return (
-                            <FilterItem label={key}/>
-                        )
-                    })
-                }
+const
+    mapStateToProps = (state = {}) => {
+        const {filterKey = 'designation'} = state;
+        return {
+            filterKey
+        }
+    },
+    FilterList = ({filterKey = 'designation'}) => {
+        const {values:filterValues} = FILTER_LIST.find(({key, values})=>key === filterKey);
+        return (
+            <div className="filter-list">
+                <div className="filter-list--keys">
+                    {
+                        FILTER_LIST.map(({key}) =><FilterItemKeys key={key} label={key} checked={filterKey === key}/>)
+                    }
+                </div>
+                <div className="filter-list--values">
+                    {
+                        filterValues.map((value)=> <FilterItemValues key={value} label={value}/>)
+                    }
+                </div>
             </div>
-            <div className="filter-list--values">
-                {
-                    FILTER_LIST.map(({values}) => {
-                        const valueComponents = values.map((value)=> {
-                            return (
-                                <FilterItem label={value}/>
-                            )
-                        });
+        )
+    },
+    FilterListContainer = connect(mapStateToProps, null)(FilterList);
 
-                        return [
-                            ...valueComponents
-                        ];
-                    })
-                }
-            </div>
-        </div>
-    )
-};
-
-export default FilterList
+export default FilterListContainer

@@ -1,5 +1,5 @@
 /*
- * The Searchbar component. Dispatched SEARCH action when pressed enter.
+ * The Searchbar component. Dispatches SEARCH action.
  */
 
 import React from 'react';
@@ -45,7 +45,7 @@ const
     },
 
 /*
- * Container Component: Get the Container Component by applying dispatch->props map to the Presentational Component (SearchBar)
+ * Container Component: Gets the Container Component by applying dispatch->props map to the Presentational Component (SearchBar)
  * An alternative is to use 'dispatch' function passed as props. But it is better to keep action/state (logic) and presentation separate
  */
     SearchBarContainer = connect(null, mapDispatchToProps)(SearchBar);

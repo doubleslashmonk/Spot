@@ -1,3 +1,7 @@
+/*
+ * This is from where the app starts. Calls App component.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';

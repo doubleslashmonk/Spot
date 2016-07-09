@@ -47,19 +47,20 @@ const
     ],
 
 /*
- * Presentational, stateless component Member. This also renders the Member Dialog on hover/focus.
- * Bootstrap OverlayTrigger has been used as a container for hovee and the MemberDialog component simply renders
+ * Presentational, stateless component Member. This also renders the Member Dialog on hovering.
+ * Bootstrap OverlayTrigger has been used as a container for hovering and the MemberDialog component simply renders
  * in it.
  */
     Member = (props) => {
         const
-            {name, id, seat, highlighted, vacant} = props,
+            {seat, highlighted, vacant} = props,
             className = `member ${vacant ? 'vacant' : ''} ${highlighted ? 'highlighted' : ''}`,
             dialogContent = vacant ?
                 <div className="dialog-vacant">This seat is vacant</div> :
                 <MemberDialog {...props} />;
         return (
             <OverlayTrigger
+                trigger='hover'
                 placement='right'
                 overlay={<Popover>{dialogContent}</Popover>}
                 delayShow={100}

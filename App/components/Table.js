@@ -9,10 +9,8 @@ import Member from './Member';
 const 
 	NUM_SEATS = 4,
 
-	/*
- * [{0,1,2,3,4}] -> [4]
- * Converts an array of 0,1,2,3,4 elements to an array of 4 elements.
- * The array passed is members list and converts to a seat list.
+/*
+ * Converts an array of 0/1/2/3/4 elements to an array of 4 elements.
  * It introduces vacant seat wherever a member is not present.
  */
 	getMembersList = (oldMembersList = []) => {

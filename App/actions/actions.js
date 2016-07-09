@@ -16,5 +16,11 @@ export default {
             type: ActionTypes.TOGGLE_FILTER,
             showFilter
         }
+    },
+    toggleFilterValues: (filterKey) => {
+        return {
+            type: ActionTypes.TOGGLE_FILTER_VALUES,
+            filterKey
+        }
     }
 }
