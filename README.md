@@ -10,12 +10,15 @@ If successful, SPOT would earn DoubleSlashMonk a spot of his own in Sprinklr off
 
 ### Usage
 
-Download the zip or clone the repo. After unziping it and navigating to the folder run the following commands.
-`npm install`
-`webpack -w --progress` 
-`npm start`  
+1. Download the zip or clone the repo. 
+2. Install [NPM](https://nodejs.org/en/)
+3. Run following commands
 
-naviaget to localhost:3333/public/ from web browser
+```bash
+npm install
+npm start
+```
+4. naviaget to localhost:3333/public/ from web browser
 
 
 ### SPOT Technology Stack
