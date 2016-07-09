@@ -18,7 +18,7 @@ If successful, SPOT would earn DoubleSlashMonk a spot of his own in Sprinklr off
 npm install
 npm start
 ```
-4. naviaget to localhost:3333/public/ from web browser
+4. navigate to localhost:3333/public/ from web browser
 
 
 ### SPOT Technology Stack
@@ -33,8 +33,3 @@ Development-time dependencies of Poster includes:
 - [Babel](https://babeljs.io/): For ES6 support.
 - [Webpack](https://webpack.github.io/): For Project bundling.
 - [webpack-server](https://webpack.github.io/docs/webpack-dev-server.html): For running the app locally
-
-
-
-
-
