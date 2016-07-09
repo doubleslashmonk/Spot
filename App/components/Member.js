@@ -60,7 +60,6 @@ const
                 <MemberDialog {...props} />;
         return (
             <OverlayTrigger
-                trigger='hover'
                 placement='right'
                 overlay={<Popover>{dialogContent}</Popover>}
                 delayShow={100}
