@@ -1,12 +1,25 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import FilterTrigger from './FilterTrigger';
+import FilterList from './FilterList';
+import {connect} from 'react-redux';
 
-const Filter = ({className = ''}) => {
-	return (
-		<div className = {`${className} filter`}>
-			<FontAwesome name="filter" className = "filter--icon"/>
-		</div>
-	)
-}
 
-export default Filter;
+const
+    mapStateToProps = ({showFilter}={}) => {
+        return {
+            showFilter
+        };
+    },
+    Filter = ({className, showFilter}) => {
+        return (
+            <div className={className}>
+                <FilterTrigger showFilter={showFilter}/>
+                {
+                    showFilter ? <FilterList /> : ''
+                }
+            </div>
+        )
+    },
+    FilterContainer = connect(mapStateToProps, null)(Filter);
+
+export default FilterContainer;

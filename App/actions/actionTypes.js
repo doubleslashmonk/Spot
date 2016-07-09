@@ -1,3 +1,4 @@
 export default {
-	SEARCH: 'SEARCH'
+    SEARCH: 'SEARCH',
+    TOGGLE_FILTER: 'TOGGLE_FILTER'
 }

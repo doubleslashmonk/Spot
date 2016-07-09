@@ -101,6 +101,72 @@ body {
 	float: right;
 }
 
+.filter-item--label {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 78%;
+}
+
+.filter-list {
+    background: white;
+    border: 1px solid #999;
+    box-shadow: 2px 1px 4px rgba(0,0,0,0.5);
+    padding: 10px;
+    position: absolute;
+    right: 169px;
+    top: 170px;
+    width: 480px;
+    z-index: 2;
+}
+
+.filter-list .filter-item {
+    display: inline-block;
+    width: 33%;
+}
+
+.filter-list--keys {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filter-list--values {
+    border-top: 1px solid #666;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.filter-list--values .filter-item{
+    margin-bottom: 10px;
+}
+
+.filter-trigger {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 10px;
+    padding: 6px;
+    text-align: center;
+    width: 40px;
+}
+
+.filter-trigger.showFilter {
+    border: 1px solid #0EBFE9;
+}
+
+.filter-trigger--icon {
+    font-size: 20px;
+}
+
+
+
 .header {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	margin-bottom: 20px;
@@ -125,6 +191,10 @@ input {
 input:focus { 
     outline:none;
     border:1px solid #0EBFE9;
+}
+
+input.filter-item--checkbox {
+    margin-right: 10px;
 }
 
 

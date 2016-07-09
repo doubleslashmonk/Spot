@@ -15,6 +15,6 @@ class App extends React.Component {
 				<Office />
 			</div>);
     }
-}
+};
 
 export default App
