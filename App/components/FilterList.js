@@ -1,3 +1,7 @@
+/*
+ * Renders the filter list. This is shown/hidden by Filter based on 'showFilter' state.
+ */
+
 import React from 'react';
 import FilterItem from './FilterItem';
 import FILTER_LIST from '../data/FILTER_LIST';

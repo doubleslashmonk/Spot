@@ -1,3 +1,8 @@
+/*
+ * This takes TABLE_LIST as data and renders each Table.
+ */
+
+
 import React from 'react';
 import TABLE_LIST from '../data/TABLE_LIST';
 import Table from './Table';

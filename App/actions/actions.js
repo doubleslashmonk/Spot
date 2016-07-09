@@ -1,3 +1,7 @@
+/*
+ * Returns Action Objects for each actionType.
+ */
+
 import ActionTypes from './actionTypes';
 
 export default {

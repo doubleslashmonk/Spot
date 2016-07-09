@@ -1,61 +1,80 @@
+/*
+ * This is the Seat Component. This renders each member sitting on the table or a vacant seat if none present.
+ * This listens to the 'results' state change and re-renders itself based on whether it is occurring in the 'results' or not.
+ * 'results' state changes when search/filter is executed.
+ */
+
 import React from 'react';
 import {connect} from 'react-redux';
 import ActionTypes from '../actions/actionTypes';
 import {Popover, OverlayTrigger} from 'react-bootstrap';
 import MemberDialog from './MemberDialog';
 
-const 
+const
+/*
+ * Maps state change in 'results' to the prop 'highlighted'. Hence Member gets the 'results' state change as a prop 'highlighted'.
+ */
+    mapStateToProps = (state = {}, {id}) => {
+        const {results = []} = state;
+        return {
+            highlighted: results.find(
+                (member) => member.id === id
+            )
+        }
+    },
 
-mapStateToProps = (state = {}, {id}) => {
-	const {results = []} = state;
-	return {
-		highlighted: results.find( 
-			(member) => member.id === id
-		)
-	}
-},
+/*
+ * A list of 'style' attributes for each member based on its seat position.
+ * The mapping of seat number is done according to the index in array.
+ */
+    POSITION_LIST = [
+        {
+            top: "-25px",
+            left: "50px"
+        },
+        {
+            top: "-25px",
+            right: "50px"
+        },
+        {
+            bottom: "-25px",
+            right: "50px"
+        },
+        {
+            bottom: "-25px",
+            left: "50px"
+        }
+    ],
 
-POSITION_LIST = [
-	{
-		top: "-25px",
-		left: "50px"
-	},
-	{
-		top: "-25px",
-		right: "50px"
-	},
-	{
-		bottom: "-25px",
-		right: "50px"
-	},
-	{
-		bottom: "-25px",
-		left: "50px"
-	}
-],
+/*
+ * Presentational, stateless component Member. This also renders the Member Dialog on hover/focus.
+ * Bootstrap OverlayTrigger has been used as a container for hovee and the MemberDialog component simply renders
+ * in it.
+ */
+    Member = (props) => {
+        const
+            {name, id, seat, highlighted, vacant} = props,
+            className = `member ${vacant ? 'vacant' : ''} ${highlighted ? 'highlighted' : ''}`,
+            dialogContent = vacant ?
+                <div className="dialog-vacant">This seat is vacant</div> :
+                <MemberDialog {...props} />;
+        return (
+            <OverlayTrigger
+                placement='right'
+                overlay={<Popover>{dialogContent}</Popover>}
+                delayShow={100}
+                delayHide={50}
+                container={this}
+                show={highlighted}
+            >
+                <div className={className} style={POSITION_LIST[seat-1]}/>
+            </OverlayTrigger>
+        );
+    },
 
-Member = (props) => {
-	const 
-		{name, id, seat, highlighted, vacant, dispatch} = props,
-		className = `member ${vacant? 'vacant': ''} ${highlighted? 'highlighted': ''}`,
-		dialogContent = vacant?
-			<div className = "dialog-vacant">This seat is vacant</div>:
-			<MemberDialog {...props} />;
-	return (
-		<OverlayTrigger 
-				
-				placement = 'right'
-				overlay = {<Popover>{dialogContent}</Popover>}
-				delayShow = {100}
-				delayHide = {50}
-				container = {this}
-				show = {highlighted}
-				>
-					<div className = {className} style = {POSITION_LIST[seat-1]}  />
-        </OverlayTrigger>
-	);
-},
-
-MemberContainer = connect(mapStateToProps,null)(Member);
+/*
+ * Container Component: Get the Container Component by applying state to Presentational Component (Filter)
+ */
+    MemberContainer = connect(mapStateToProps, null)(Member);
 
 export default MemberContainer;

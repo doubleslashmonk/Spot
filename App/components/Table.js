@@ -1,8 +1,20 @@
+/*
+ * The Table component renders a table. It uses the 'name' and the 'members' passed to it. It also renders each Member
+ * on the table.
+ */
+
 import React from 'react';
 import Member from './Member';
 
 const 
 	NUM_SEATS = 4,
+
+	/*
+ * [{0,1,2,3,4}] -> [4]
+ * Converts an array of 0,1,2,3,4 elements to an array of 4 elements.
+ * The array passed is members list and converts to a seat list.
+ * It introduces vacant seat wherever a member is not present.
+ */
 	getMembersList = (oldMembersList = []) => {
 		let 
 			occupiedSeats = oldMembersList.map( ({seat}) => seat),
@@ -33,6 +45,6 @@ const
 				</div>			
 			</div>
 		);
-	}
+	};
 
 export default Table

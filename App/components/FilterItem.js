@@ -1,3 +1,7 @@
+/*
+ * Filter Item - Renders a checkbox and label.
+ */
+
 import React from 'react';
 
 const FilterItem = ({label}) => {
