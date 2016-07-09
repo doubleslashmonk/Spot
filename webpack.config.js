@@ -1,4 +1,7 @@
 module.exports = {
+    /* Use this only for production deployment  
+    devtool: 'cheap-module-source-map' */
+    
     entry: './app/main.js',
     output: {
         filename: 'public/bundle.js'
