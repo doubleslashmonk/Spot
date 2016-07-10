@@ -25,8 +25,8 @@ npm start
 
 - [React](https://facebook.github.io/react/): Because this ->[react-howto](https://github.com/petehunt/react-howto/)!
 - [Redux](http://redux.js.org/): Behind-scenes part, really. An implementation of [Flux architecture](https://facebook.github.io/flux/). Defined as a predictable state container for JavaScript apps.
-- [React-Bootstrap](http://redux.js.org/): Mainly used for overlay component
-- [react-fontawesome"](http://redux.js.org/)
+- [React-Bootstrap](https://react-bootstrap.github.io/): Mainly used for overlay component
+- [react-fontawesome"](https://www.npmjs.com/package/react-fontawesome)
 
 Development-time dependencies of Poster includes:
 
