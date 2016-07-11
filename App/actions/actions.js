@@ -5,6 +5,20 @@
 import ActionTypes from './actionTypes';
 
 export default {
+    addFilter: (value, filterKey) => {
+        return {
+            type: ActionTypes.ADD_FILTER,
+            value,
+            filterKey
+        }
+    },
+    removeFilter: (value, filterKey) => {
+        return {
+            type: ActionTypes.REMOVE_FILTER,
+            value,
+            filterKey
+        }
+    },
     searchInput: (input) => {
         return {
             type: ActionTypes.SEARCH,

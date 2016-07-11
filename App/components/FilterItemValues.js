@@ -5,12 +5,14 @@
 import FilterItem from './FilterItem';
 import {connect} from 'react-redux';
 import {filterMembers} from '../actions/actions';
+import Actions from '../actions/actions';
 
 const
-    mapDispatchToProps = (dispatch, {key}) => {
+    {addFilter, removeFilter} = Actions,
+    mapDispatchToProps = (dispatch, {label}) => {
         return {
-            onClick: () => {
-
+            onChange: ({target}) => {
+                dispatch(target.checked ? addFilter(label) : removeFilter(label))
             }
         };
     },

@@ -14,12 +14,35 @@ const
 /*
  * Maps state change in 'results' to the prop 'highlighted'. Hence Member gets the 'results' state change as a prop 'highlighted'.
  */
-    mapStateToProps = (state = {}, {id}) => {
-        const {results = []} = state;
+    mapStateToProps = (state = {}, member) => {
+        if (member.vacant) {
+            return {
+                highlighted: false
+            }
+        }
+
+        const {searchInput, filterValues, filterKey} = state,
+            isSearchDone = !!searchInput,
+            isFilteringDone = filterKey && filterValues.length > 0,
+            matchesSearchCriteria = member.name.toLowerCase() === searchInput.toLowerCase() ||
+                member.name.split(' ')
+                    .map(name=> name.toLowerCase()).indexOf(searchInput.toLowerCase()) > -1,
+            matchesFilterCriteria = filterValues.find((value)=>member[filterKey] === value);
+
+        let highlighted = false;
+
+        if (isSearchDone && isFilteringDone) {
+            highlighted = matchesSearchCriteria && matchesFilterCriteria;
+        }
+        else if (isSearchDone) {
+            highlighted = matchesSearchCriteria;
+        }
+        else if (isFilteringDone) {
+            highlighted = matchesFilterCriteria;
+        }
+
         return {
-            highlighted: results.find(
-                (member) => member.id === id
-            )
+            highlighted
         }
     },
 

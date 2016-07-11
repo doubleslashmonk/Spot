@@ -97,7 +97,7 @@ const
 					img: 'http://malik4sprinklr.com/repos/spot/assets/images/9.png',
 					project: 'Apple',
 					seat: 1,
-					team: 'Front End'
+					team: 'Frontend'
 				},
 				{
 					designation: 'JR. Frontend Dev',
@@ -106,7 +106,7 @@ const
 					img: 'http://malik4sprinklr.com/repos/spot/assets/images/10.png',
 					project: 'Morgan Stanley',
 					seat: 2,
-					team: 'Front End'
+					team: 'Frontend'
 				},
 				{
 					designation: 'SR. Backend Dev',
@@ -138,7 +138,7 @@ const
 					img: 'http://malik4sprinklr.com/repos/spot/assets/images/4.png',
 					project: 'Warner Brothers',
 					seat: 1,
-					team: 'Front End'
+					team: 'Frontend'
 				},
 				{
 					designation: 'JR. Frontend Dev',
@@ -147,7 +147,7 @@ const
 					img: 'http://malik4sprinklr.com/repos/spot/assets/images/5.png',
 					project: 'Royal Bank of Canada',
 					seat: 2,
-					team: 'Front End'
+					team: 'Frontend'
 				},
 				{
 					designation: 'JR. Frontend Dev',
@@ -156,7 +156,7 @@ const
 					img: 'http://malik4sprinklr.com/repos/spot/assets/images/1.png',
 					project: 'Royal Bank of Canada',
 					seat: 3,
-					team: 'Backend'
+					team: 'Frontend'
 				}
 			]
 		},

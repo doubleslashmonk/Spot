@@ -9,32 +9,36 @@ import {combineReducers} from 'redux';
 import ActionTypes from '../actions/actionTypes';
 
 const
+    FilterValues = (state = [], action) => {
+        const {value} = action;
+        switch (action.type) {
+            case ActionTypes.ADD_FILTER:
+                return [
+                    ...state,
+                    value
+                ];
+            case ActionTypes.REMOVE_FILTER:
+                state.splice(state.indexOf(value), 1);
+                return [
+                    ...state
+                ]
+            default:
+                return state;
+        }
+
+    },
 /*
  * Reducer for 'results' state. It finds all the members from the TABLE_LIST that match with the givern input from
  * search.
  */
-    Search = (state = [], action) => {
+    Search = (state = '', action) => {
         switch (action.type) {
             case ActionTypes.SEARCH:
-                const {input} = action,
-                    membersList = TABLE_LIST.reduce(
-                        (allMembers, {members}) => {
-                            return [
-                                ...allMembers,
-                                ...members
-                            ];
-                        }, []);
-                return membersList.filter(
-                    ({name}) =>
-                    name.split(' ')
-                        .map((part) => part.toLowerCase())
-                        .indexOf(input.toLowerCase()) > -1 ||
-                    name.toLowerCase() === input.toLowerCase()
-                );
-                break;
+                return action.input;
             default:
                 return state;
         }
+
     },
 /*
  * Reducer for 'showFilter' state. computes 'showFilter' state based on action.
@@ -61,6 +65,7 @@ const
 
 export default combineReducers({
     filterKey: ToggleFilterValues,
-    results: Search,
+    filterValues: FilterValues,
+    searchInput: Search,
     showFilter: ToggleFilter
 })

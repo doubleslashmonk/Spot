@@ -10,13 +10,14 @@ import FILTER_LIST from '../data/FILTER_LIST';
 
 const
     mapStateToProps = (state = {}) => {
-        const {filterKey = 'designation'} = state;
+        const {filterKey = 'designation', filterValues = []} = state;
         return {
-            filterKey
+            filterKey,
+            filterValues
         }
     },
-    FilterList = ({filterKey = 'designation'}) => {
-        const {values:filterValues} = FILTER_LIST.find(({key, values})=>key === filterKey);
+    FilterList = ({filterKey = 'designation', filterValues= []}) => {
+        const {values} = FILTER_LIST.find(({key, values})=>key === filterKey);
         return (
             <div className="filter-list">
                 <div className="filter-list--keys">
@@ -26,7 +27,8 @@ const
                 </div>
                 <div className="filter-list--values">
                     {
-                        filterValues.map((value)=> <FilterItemValues key={value} label={value}/>)
+                        values.map((value)=> <FilterItemValues key={value} label={value}
+                                                               checked={filterValues.find((fValue)=>fValue===value)}/>)
                     }
                 </div>
             </div>
