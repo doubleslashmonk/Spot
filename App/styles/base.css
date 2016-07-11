@@ -1,4 +1,5 @@
 body {
+	min-width: 750px;
 	background-color: #eee;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 	padding: 20px 170px;
@@ -216,6 +217,7 @@ input.filter-item--checkbox {
 }
 
 .office {
+	min-width: 750px;
 	background-color: #fff;
 	border: 1px solid #000;
 	box-sizing: border-box;
@@ -273,6 +275,7 @@ input.filter-item--checkbox {
 
 .toolbar {
 	margin-bottom: 10px;
+	min-width: 750px;
 }
 
 .toolbar--name {
